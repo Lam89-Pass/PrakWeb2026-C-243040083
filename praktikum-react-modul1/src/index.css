@@ -1,19 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap");
+
 :root {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light;
-  color: #2c3e50;
-  background-color: #ffffff;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", "Noto Sans SC", "Noto Sans Arabic", system-ui, sans-serif;
+  line-height: 1.6;
+  color-scheme: dark;
+  color: #e6eeff;
+  background-color: #040a1c;
 }
+
+:lang(zh) { font-family: "Noto Sans SC", "Plus Jakarta Sans", system-ui, sans-serif; }
+:lang(ja) { font-family: "Noto Sans JP", "Plus Jakarta Sans", system-ui, sans-serif; }
+:lang(ar) { font-family: "Noto Sans Arabic", "Plus Jakarta Sans", system-ui, sans-serif; }
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #040a1c;
 }
 
-#root {
-  min-height: 100vh;
-}
+#root { min-height: 100vh; }
