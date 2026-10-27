@@ -1,12 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./index.css";
-// Mengidentifikasi elemen div dengan id 'root' pada index.html
-const rootElement = document.getElementById("root");
-// Membuat root React DOM dan merender komponen utama <App />
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
 );
