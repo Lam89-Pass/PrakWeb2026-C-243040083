@@ -1,0 +1,19 @@
+{
+  "name": "prakweb2026-c-243040083",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lam89-Pass/PrakWeb2026-C-243040083.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lam89-Pass/PrakWeb2026-C-243040083/issues"
+  },
+  "homepage": "https://github.com/Lam89-Pass/PrakWeb2026-C-243040083#readme"
+}
