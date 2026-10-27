@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import "./revisi.css";
+import "./game/game.css";
+import Game from "./game/Game";
 import KartuProfil from "./KartuProfil";
 import KartuKontak from "./KartuKontak";
 import ProjectCard from "./ProjectCard";
@@ -17,6 +19,7 @@ const KELAS = "IF - C - Praktikum We";
 function App() {
   const [lang, setLang] = useState("id");
   const [popup, setPopup] = useState(false);
+  const [view, setView] = useState("home");
   const t = ui[lang];
   const a = akademik[lang];
   const activeIndex = languages.findIndex((l) => l.code === lang);
@@ -31,6 +34,15 @@ function App() {
   const bukaPopup = () => setPopup(true);
   const tutupPopup = useCallback(() => setPopup(false), []);
 
+  if (view === "game") {
+    return (
+      <div className="page">
+        <div className="bg" aria-hidden="true" />
+        <Game onBack={() => setView("home")} />
+      </div>
+    );
+  }
+
   return (
     <div className="page">
       <div className="bg" aria-hidden="true">
@@ -44,8 +56,12 @@ function App() {
             {t.brand}
           </span>
         </div>
-
-        <LangDropdown languages={languages} value={lang} onChange={setLang} label={t.langLabel} />
+        <div className="topbar-actions">
+          <button type="button" className="game-btn" onClick={() => setView("game")}>
+            <span className="game-btn-ico">🎮</span> Game Mini Seru
+          </button>
+          <LangDropdown languages={languages} value={lang} onChange={setLang} label={t.langLabel} />
+        </div>{" "}
       </header>
 
       <main className="wrap">
